@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Board</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="column" id="not-started-column">
+        <h2>Not Yet Started</h2>
+      </div>
+      <div class="column" id="in-progress-column">
+        <h2>In Progress</h2>
+      </div>
+      <div class="column" id="completed-column">
+        <h2>Completed</h2>
+      </div>
+    </div>
+
+    <button id="add-task-btn">Add Task</button>
+
+    <div id="task-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add New Task</h2>
+        <input type="text" id="task-title" placeholder="Title" required />
+        <textarea
+          id="task-description"
+          placeholder="Description"
+          required
+        ></textarea>
+        <input type="date" id="task-deadline" required />
+        <button id="save-task-btn">Save Task</button>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
